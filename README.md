@@ -31,8 +31,6 @@ The repository documents the data processing and analysis perform on the data to
     |--- data                   # placeholder directory intended to contain raw data
     |--- figures                # figures generated for the publication purposes
     |--- scripts                # contains all scripts used in the study 
-         |--- data_processing   # scripts processing raw data with PySpark on HDFS cluster
-         |--- analysis          # scripts documenting analytical tasks
 ```
 
 # Data Description
@@ -49,6 +47,7 @@ NYC COVID-19 data | 2020-04-01∼2020-06-04 | Zipcode/daily | NYC Department of 
 American CommunitySurvey (ACS)2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics | 
 NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN |  | Hospitals affiliated with the NYC Health and Hospital Corporation and public hospital system. | 
 Nursing home data | updated 2020-05-24 | (X,Y)/NaN | Centers for Disease Control’s NationalHealthcare Safety Network | Nursing home information, including the number of beds and occupancy | 
+
 <sup>*<\sup> See Data Availability Statement 
 
 ### Data Availability Statement
