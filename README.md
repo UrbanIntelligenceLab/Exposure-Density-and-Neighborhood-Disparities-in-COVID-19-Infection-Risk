@@ -15,7 +15,7 @@ This repository documents the data processing and analysis perform on the data t
 
 <sup>*</sup>Correspondence and requests for materials should be addressed to Constantine E. Kontokosta (email: <ckontokosta@nyu.edu>).
 
-![Figure 1]()
+![fig](https://github.com/UrbanIntelligenceLab/Exposure-Density-and-Neighborhood-Disparities-in-COVID-19-Infection-Risk/blob/main/figures/exp_dens.png?raw=true)
 
 ## Abstract
 Although there is increasing awareness of disparities in COVID-19 infection risk among vulnerable communities, the effect of behavioral interventions at the scale of individual neighborhoods has not been fully studied. We develop a new method to quantify neighborhood activity behaviors at high spatial and temporal resolutions and test whether, and to what extent, behavioral responses to social distancing policies vary with socioeconomic and demographic characteristics. We define *exposure density* (*E<sub>x</sub> &rho;*) as a measure of both the localized volume of activity in a defined area and the proportion of activity occurring in distinct land use types. Using detailed neighborhood data for New York City, we quantify neighborhood exposure density using anonymized smartphone geolocation data over a three-month period covering more than 12 million unique devices, and rasterize granular land use information to contextualize observed activity. Next, we analyze disparities in community social distancing by estimating variations in neighborhood activity by land use type before and after a mandated stay-at-home order. Finally, we evaluate the effects of localized demographic, socioeconomic, and built environment density characteristics on infection rates and deaths in order to identify disparities in health outcomes related to exposure risk. Our findings demonstrate distinct behavioral patterns across neighborhoods after the stay-at-home order and that these variations in exposure density had a direct and measurable impact on the risk of infection. Notably, we find that an additional 10\% reduction in exposure density city-wide could have saved between 1,849 and 4,068 lives during the study period, predominantly in lower-income and minority communities.
@@ -44,11 +44,11 @@ NYC Primary Land UseTax Lot Output (PLUTO) | updated 2020-02-24 | Parcel/NaN | [
 NYC Building Footprints | updated 2020-07-06 | Footprint/NaN | NYC Department of Information Technology & Telecom-munications (DoITT) | Perimeter outlines of more than 1 million buildings in NYC. | 
 Road Network Data (LION) | updated 2020-04-28 | Street segment/NaN | NYC Department of Transportation | Single line street base map with associated information on type, width, accessibility etc. |   
 NYC COVID-19 data | 2020-04-01∼2020-06-04 | Zipcode/daily | NYC Department of Health and Mental Hygiene | COVID-19  confirmed  cases,  deaths,  and  positivity  rates | https://github.com/nychealth/coronavirus-data
-American CommunitySurvey (ACS)2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics | 
-NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN |  | Hospitals affiliated with the NYC Health and Hospital Corporation and public hospital system. | 
+American CommunitySurvey (ACS) | 2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics. | 
+NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN | NYC Health and Hospital Corporation | Hospitals affiliated with the NYC Health and Hospital Corporation and public hospital system. | 
 Nursing home data | updated 2020-05-24 | (X,Y)/NaN | Centers for Disease Control’s NationalHealthcare Safety Network | Nursing home information, including the number of beds and occupancy | 
 
-<sup>*<\sup> See Data Availability Statement 
+<sup>*</sup>See Data Availability Statement 
 
 ### Data Availability Statement
 The annonymized geolocated mobile application activity data that support the findings of this study are available from VenPath, Inc. but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon
