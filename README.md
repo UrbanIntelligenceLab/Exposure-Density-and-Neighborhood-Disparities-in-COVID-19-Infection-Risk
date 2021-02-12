@@ -40,17 +40,15 @@ The study combines a large scale, geolocated mobility data with detailed land co
 Dataset | Time range | Resolution (spatial/temporal) | Source | Description | URL
 --------|------------|-------------------------------|--------|-------------|----
 Mobility data | 2020-02-01∼2020-04-30 | (X,Y)/second | [VenPath, Inc.](https://www.venpath.net/) | More than 127 billion geotagged data points associated with 120 million unique devices every month. | N/A<sup>*</sup>
-NYC Primary Land UseTax Lot Output (PLUTO) | updated 2020-02-24 | Parcel/NaN | [NYC Department of City Planning](https://www1.nyc.gov/site/planning/index.page) | Land  use  and  building  type  information  provided. | 
+NYC Primary Land Use Tax Lot Output (PLUTO) | updated 2020-02-24 | Parcel/NaN | [NYC Department of City Planning](https://www1.nyc.gov/site/planning/index.page) | Land  use  and  building  type  information  provided. | 
 NYC Building Footprints | updated 2020-07-06 | Footprint/NaN | NYC Department of Information Technology & Telecom-munications (DoITT) | Perimeter outlines of more than 1 million buildings in NYC. | 
 Road Network Data (LION) | updated 2020-04-28 | Street segment/NaN | NYC Department of Transportation | Single line street base map with associated information on type, width, accessibility etc. |   
 NYC COVID-19 data | 2020-04-01∼2020-06-04 | Zipcode/daily | NYC Department of Health and Mental Hygiene | COVID-19  confirmed  cases,  deaths,  and  positivity  rates | https://github.com/nychealth/coronavirus-data
-American CommunitySurvey (ACS) | 2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics. | 
+American Community Survey (ACS) | 2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics. | 
 NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN | NYC Health and Hospital Corporation | Hospitals affiliated with the NYC Health and Hospital Corporation and public hospital system. | 
 Nursing home data | updated 2020-05-24 | (X,Y)/NaN | Centers for Disease Control’s NationalHealthcare Safety Network | Nursing home information, including the number of beds and occupancy | 
 
-<sup>*</sup>See Data Availability Statement 
-
-### Data Availability Statement
+### <sup>*</sup>Data Availability Statement
 The annonymized geolocated mobile application activity data that support the findings of this study are available from VenPath, Inc. but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon
 reasonable request and with permission of VenPath, Inc.
 
