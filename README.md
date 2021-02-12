@@ -37,37 +37,23 @@ The repository documents the data processing and analysis perform on the data to
 
 # Data Description
 
-## Mobility Data
-The primary data used for the main analysis are the **annonymized geolocated mobile application activity** provided by [VenPath, Inc.](https://www.venpath.net/) – a data marketplace company providing mobile application data and business analytics services extracted from more than 200 various mobile applications and covering more than 120 million devices every month across the U.S. The initial dataset of 23TB of compressed comma-separated-value files (CSV) covering the period from June 2016 through October 2017 and contains more than 320 billion data points.
+The study combines a large scale, geolocated mobility data with detailed land cover and land use information in New York City to estimate neighborhood level exposure density and evaluate it's relationship with local COVID-19 rates. All of the data sources used in the paper are listed in the table below.
+
+Dataset | Time range | Resolution (spatial/temporal) | Source | Description | URL
+--------|------------|-------------------------------|--------|-------------|----
+Mobility data | 2020-02-01∼2020-04-30 | (X,Y)/second | [VenPath, Inc.](https://www.venpath.net/) | More than 127 billion geotagged data points associated with 120 million unique devices every month. | N/A<sup>*</sup>
+NYC Primary Land UseTax Lot Output (PLUTO) | updated 2020-02-24 | Parcel/NaN | [NYC Department of City Planning](https://www1.nyc.gov/site/planning/index.page) | Land  use  and  building  type  information  provided. | 
+NYC Building Footprints | updated 2020-07-06 | Footprint/NaN | NYC Department of Information Technology & Telecom-munications (DoITT) | Perimeter outlines of more than 1 million buildings in NYC. | 
+Road Network Data (LION) | updated 2020-04-28 | Street segment/NaN | NYC Department of Transportation | Single line street base map with associated information on type, width, accessibility etc. |   
+NYC COVID-19 data | 2020-04-01∼2020-06-04 | Zipcode/daily | NYC Department of Health and Mental Hygiene | COVID-19  confirmed  cases,  deaths,  and  positivity  rates | https://github.com/nychealth/coronavirus-data
+American CommunitySurvey (ACS)2018 5-yearestimates | Zipcode/NaN | U.S. Census Bureau | Neighborhood demographic and socioeconomic characteristics | 
+NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN |  | Hospitals affiliated with the NYC Health and Hospital Corporation and public hospital system. | 
+Nursing home data | updated 2020-05-24 | (X,Y)/NaN | Centers for Disease Control’s NationalHealthcare Safety Network | Nursing home information, including the number of beds and occupancy | 
+<sup>*<\sup> See Data Availability Statement 
 
 ### Data Availability Statement
 The annonymized geolocated mobile application activity data that support the findings of this study are available from VenPath, Inc. but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon
 reasonable request and with permission of VenPath, Inc.
-
-### Data structure
-The mobility data was organized by the date of registering it in the database, not by the date of ping creation and is partitioned by year, month and day. It is of the following structure:
-
-Column | Type | Description
--------|------|-------------
-venpath_id | int | Auto-incrementing key to denote that this is a unique locate
-app_id | str | The source app that provided this data
-ad_id | str | The annonymized advertising ID
-id_type | str | iOS (idfa) or Android (afid)
-country_code | str | The locale setting on the user's phone
-device_make | str | The make of the user's device
-device_model | str | The model of the user's device
-device_os | str | The operating system of the user's device
-device_os_version | str | The version of the operating system on the user's device
-latitude | float | The geographical latitude
-longitude | float | The geographical longitude
-timestamp | timestamp | The UTC timestamp / datestamp of when this location point was collected
-ip_address | str | The IP address of the user at the time of the data collection
-horizontal_accuracy | float | The horizontal accuracy of the location point, in meters
-vertical_accuracy | str | The vertical accuracy of the location point, in meters
-foreground | bool | true if the ping was collected in the foreground or false if it was collected in the background
-
-## Anciliary Data
-The study relies on publicly available data sources as well, which are listed in the table below.
 
 # System Specifications
 Mobility data were provided via dedicated AWS S3 service and were managed in accordance with NYU Institutional Review Board approval IRB-FY2018-1645 and stored and accessed in a secured environment at [New York University’s Center for Urban Science and Progress](cusp.nyu.edu) (NYU CUSP) [Research Computing Facility](https://datahub.cusp.nyu.edu/) (RCF), which is equipped with High Performance Computing (HPC) infrastructure, controlled access, and restricted connectivity. Raw data was deployed to Hadoop Cloudera cluster of 20 nodes with 256 GB memory and 2.1 GHz CPU speed each with a total of 1280 cores and 5.1 TB memory. Initial data processing was conducted using [Apache PySpark](https://spark.apache.org/docs/latest/api/python/index.html) version 2.4. The following analysis performed on the processed data was conducted on RCF's High Memory computing server with total memory of 1TB and Intel(R) Xeon(R) CPU E5-4640 0 @ 2.40GHz (4x8 cores) using predominantly [Python](https://www.python.org/) version 3.7 and [Quantum GIS](https://www.qgis.org/en/site/index.html) version 3.4 Madeira. Each script file relies on a separate set of libraries, which were listed at the begining of each of the file, including library version used for the particular task.
