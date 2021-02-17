@@ -1,0 +1,26 @@
+land_use_cat,code
+outside city limits,0
+land,2
+water,5
+low residential,10
+low residential building,11
+residential,20
+residential building,21
+commercial,30
+commercial building,31
+mixed,40
+mixed building,41
+open space,50
+open space building,51
+public,60
+public building,61
+industrial,70
+industrial building,71
+road,80
+sidewalk,90
+highway,100
+other transportation,110
+other transportation building,111
+rural,120
+rural building,121
+other,200

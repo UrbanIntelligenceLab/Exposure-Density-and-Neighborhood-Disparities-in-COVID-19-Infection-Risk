@@ -1,0 +1,1 @@
+New York City administrative boundary data was obtained from NYC Open Data Platform: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm

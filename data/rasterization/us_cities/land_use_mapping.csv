@@ -1,0 +1,12 @@
+#,City,File,Column,DataType,Type,Description,Label
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,1,One & Two Family Buildings,low residential
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,2,Multi-Family Walk-Up Buildings,residential
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,3,Multi-Family Elevator Buildings,residential
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,4,Mixed Residential & Commercial Buildings,mixed
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,5,Commercial & Office Buildings,commercial
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,6,Industrial & Manufacturing,industrial
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,7,Transportation & Utility,industrial
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,8,Public Facilities & Institutions,public
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,9,Open Space & Outdoor Recreation,open space
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,10,Parking Facilities,other transportation
+1,New York City,/scratch/share/UIL/public_data/rasterization/us_cities/1_New_York_City_NY/Land Use/MapPLUTO.shp,LandUse,str,11,Vacant Land,other

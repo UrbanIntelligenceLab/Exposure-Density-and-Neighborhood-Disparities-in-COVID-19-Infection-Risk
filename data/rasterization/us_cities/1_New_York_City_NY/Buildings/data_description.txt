@@ -1,0 +1,1 @@
+New York City building footprints information was retrieved from NYC Building Footprints dataset provided by NYC Department of Information Technology & Telecommunications (DoITT) and available at https://www1.nyc.gov/site/doitt/residents/gis-2d-data.page data was obtained from NYC Open Data Platform: https://data.cityofnewyork.us/City-Government/Borough-Boundaries/tqmj-j8zm
