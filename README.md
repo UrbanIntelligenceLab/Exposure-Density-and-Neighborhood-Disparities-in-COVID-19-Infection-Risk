@@ -28,9 +28,16 @@ The repository documents the data processing and analysis perform on the data to
 
 ```
 .\root
-    |--- data                   # placeholder directory intended to contain raw data
-    |--- figures                # figures generated for the publication purposes
-    |--- scripts                # contains all scripts used in the study 
+    |--- data                           # placeholder directory intended to contain raw data
+        |--- rsterization               # folder containing rasterization data
+            |--- us_cities              # lists all of different cities data
+                |--- 1_New_York_City    # selected New York City data
+                    |--- Boundary       # city boundary shapefile
+                    |--- Buildings      # city building footprints shapefile
+                    |--- Land Use       # land use information shapefile
+                    |--- Streets        # street network shapefile
+    |--- figures                        # figures generated for the publication purposes
+    |--- scripts                        # contains all scripts used in the study 
 ```
 
 # Data Description
