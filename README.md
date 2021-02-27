@@ -1,5 +1,5 @@
 # Summary
-This repository documents the data processing and analysis perform on the data to support the findings presented in the article **"Exposure Density and Neighborhood Disparities in COVID-19 Infection Risk"** published in *PNAS*.
+This repository documents the data processing and analysis code associated with the article **"Exposure Density and Neighborhood Disparities in COVID-19 Infection Risk"** published in *PNAS*.
 
 # Title: Exposure Density and Neighborhood Disparities in COVID-19 Infection Risk
 
@@ -24,7 +24,7 @@ Although there is increasing awareness of disparities in COVID-19 infection risk
 Hong, B., Bonczak, B., Gupta, A., Thorpe, L. E. & Kontokosta, C. E. (in press). Exposure Density and Neighborhood Disparities in COVID-19 Infection Risk. *PNAS*
 
 # Repository Structure
-The repository documents the data processing and analysis perform on the data to support the findings of the study reported in the published article. It is structured as follows:
+The repository documents the data processing and analysis performed to support the findings of the study reported in the published article. It is structured as follows:
 
 ```
 .\root
@@ -42,7 +42,7 @@ The repository documents the data processing and analysis perform on the data to
 
 # Data Description
 
-The study combines a large scale, geolocated mobility data with detailed land cover and land use information in New York City to estimate neighborhood level exposure density and evaluate it's relationship with local COVID-19 rates. All of the data sources used in the paper are listed in the table below.
+The study combines geolocated mobility data with detailed land cover and land use information in New York City to estimate neighborhood level exposure density and evaluate it's relationship with local COVID-19 infection rates. All of the data sources used in the paper are listed in the table below.
 
 Dataset | Time range | Resolution (spatial/temporal) | Source | Description | URL
 --------|------------|-------------------------------|--------|-------------|----
@@ -56,17 +56,17 @@ NYC Hospital locations | updated 2017-09-08 | (X,Y)/NaN | [NYC Health and Hospit
 Nursing home data | updated 2020-05-24 | (X,Y)/NaN | [Centers for Disease Control’s National Healthcare Safety Network](https://www.cdc.gov/nhsn/index.html) | Nursing home information, including the number of beds and occupancy | https://data.cms.gov/stories/s/bkwz-xpvg
 
 ### <sup>*</sup>Data Availability Statement
-The annonymized geolocated mobile application activity data that support the findings of this study are available from VenPath, Inc. but restrictions apply to the availability of these data, which were used under license for the current study, and so are not publicly available. Data are however available from the authors upon
+The annonymized geolocated mobile application activity data that support the findings of this study are available from VenPath, Inc. but restrictions apply to the availability of these data, which were used under license for the current study, and are therefore not publicly available. However, data are available from the authors upon
 reasonable request and with permission of VenPath, Inc.
 
 # System Specifications
-Mobility data were provided via dedicated AWS S3 service and were managed in accordance with NYU Institutional Review Board approval IRB-FY2018-1645 and stored and accessed in a secured environment at [New York University](https://www.nyu.edu/)’s [High Performance Computing](https://sites.google.com/a/nyu.edu/nyu-hpc/home) (HPC) and [Center for Urban Science and Progress](cusp.nyu.edu) (NYU CUSP) [Research Computing Facility](https://datahub.cusp.nyu.edu/) (RCF), both of which are secure environments with controlled access and restricted connectivity. Raw data was deployed to NYU HPC Dumbo server, equipped with Hadoop (2.6.0) Cloudera CDH (5.15) cluster with Yarn with 44 compute nodes and the total of 704 CPU cores (2x8-core per node), 5.6 TB RAM (128 GB per node) and 1.4 PB storage. Initial data processing was conducted using [Apache PySpark](https://spark.apache.org/docs/latest/api/python/index.html) version 2.4. The following analysis performed on the processed data was conducted on RCF's High Memory computing server with total memory of 1TB and Intel(R) Xeon(R) CPU E5-4640 0 @ 2.40GHz (4x8 cores) using predominantly [Python](https://www.python.org/) version 3.7 and [Quantum GIS](https://www.qgis.org/en/site/index.html) version 3.4 Madeira. Each script file relies on a separate set of libraries, which were listed at the begining of each of the file, including library version used for the particular task.
+Mobility data were provided via a dedicated AWS S3 service and were managed in accordance with NYU Institutional Review Board approval IRB-FY2018-1645 and stored and accessed in a secured environment at [New York University](https://www.nyu.edu/)’s [High Performance Computing](https://sites.google.com/a/nyu.edu/nyu-hpc/home) (HPC) and [Center for Urban Science and Progress](cusp.nyu.edu) (NYU CUSP) [Research Computing Facility](https://datahub.cusp.nyu.edu/) (RCF), both of which are secure environments with controlled access and restricted connectivity. Raw data were deployed to the NYU HPC Dumbo server, equipped with a Hadoop (2.6.0) Cloudera CDH (5.15) cluster with Yarn with 44 compute nodes and the total of 704 CPU cores (2x8-core per node), 5.6 TB RAM (128 GB per node) and 1.4 PB storage. Initial data processing was conducted using [Apache PySpark](https://spark.apache.org/docs/latest/api/python/index.html) version 2.4. The following analysis performed on the processed data was conducted on RCF's High Memory computing server with total memory of 1TB and Intel(R) Xeon(R) CPU E5-4640 0 @ 2.40GHz (4x8 cores) using predominantly [Python](https://www.python.org/) version 3.7 and [Quantum GIS](https://www.qgis.org/en/site/index.html) version 3.4 Madeira. Each script file relies on a separate set of libraries, which were listed at the beginning of each file, including the library version used for the particular task.
 
 # License
 
 MIT License
 
-Copyright (c) 2021 Urban Intelligence Lab
+Copyright (c) 2021 Urban Intelligence Lab, Hong, Bonczak, Gupta, and Kontokosta
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
